@@ -88,6 +88,7 @@ void talk_to_client::on_clients()
     for (auto& client : clients)
         msg += client->username() + " ";
     write("clients " + msg + "\n");
+    clients_changed_ = false;
 }
 
 
